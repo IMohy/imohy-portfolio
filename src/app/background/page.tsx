@@ -6,6 +6,7 @@ import EducationCard from "@/components/Cards/EducationCard";
 import ExperienceCard from "@/components/Cards/ExperienceCard";
 import { useQuery } from "@tanstack/react-query";
 import { fetchBackgroundData } from "@/api/background";
+import Head from "next/head";
 
 interface EduCard {
     id: number;

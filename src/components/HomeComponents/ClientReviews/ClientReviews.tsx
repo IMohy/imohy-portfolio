@@ -1,16 +1,14 @@
 import ReviewCard from "./ReviewCard";
 import axios from "axios";
-import { useQuery } from "react-query";
 import ParagraphSkeleton from "../../shared/ParagraphSkeleton";
+import { fetchReviewsData } from "@/api/review";
+import { useQuery } from "@tanstack/react-query";
 
 const ClientReviews = () => {
-    const { isLoading, error, data } = useQuery("review", () =>
-        axios
-            .get("api/review")
-            .then(({ data }) => data)
-            .catch((error) => console.error("Error fetching testimonials:", error))
-    );
-
+    const { isLoading, data } = useQuery({
+        queryKey: ["review"],
+        queryFn: fetchReviewsData,
+    });
     return (
         <>
             <div className="px-2 md:px-8 py-4 text-lg font-bold text-Snow">Clients Reviews</div>

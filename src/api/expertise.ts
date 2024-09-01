@@ -11,15 +11,6 @@ const expertise = [
   },
 ];
 
-export default function handler(
-  req: any,
-  res: {
-    status: (arg0: number) => {
-      (): any;
-      new (): any;
-      json: { (arg0: { id: number; title: string; desc: string }[]): void; new (): any };
-    };
-  }
-) {
-  res.status(200).json(expertise);
+export function fetchExpertiseData() {
+  return expertise;
 }

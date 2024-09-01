@@ -33,20 +33,6 @@ const recommendationCard = [
     linkednURL: "https://www.linkedin.com/in/muhammadullahafridi/",
   },
 ];
-export default function handler(
-  req: any,
-  res: {
-    status: (arg0: number) => {
-      (): any;
-      new (): any;
-      json: {
-        (
-          arg0: { id: number; name: string; image: string; designation: string; view: string; linkednURL: string }[]
-        ): void;
-        new (): any;
-      };
-    };
-  }
-) {
-  res.status(200).json(recommendationCard);
+export function fetchRecommendationsData() {
+  return recommendationCard;
 }

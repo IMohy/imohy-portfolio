@@ -32,20 +32,6 @@ const review = [
       "I have worked with Osama and he is very professional and excellent software  developer. I admire his speed of development and quality of work when given an assignment.",
   },
 ];
-export default function handler(
-  req: any,
-  res: {
-    status: (arg0: number) => {
-      (): any;
-      new (): any;
-      json: {
-        (
-          arg0: { id: number; clientName: string; clientLocation: string; clientSource: string; clientReview: string }[]
-        ): void;
-        new (): any;
-      };
-    };
-  }
-) {
-  res.status(200).json(review);
+export function fetchReviewsData() {
+  return review;
 }

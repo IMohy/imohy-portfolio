@@ -14,7 +14,7 @@ import Intro from "@/components/shared/Intro";
 import Nav from "@/components/shared/Nav/Nav";
 import Head from "next/head";
 import Providers from "./providers";
-import './styles/globals.css'
+import "./styles/globals.css";
 
 type LayoutProps = {
   children: ReactNode;
@@ -47,6 +47,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           name="description"
           content="IMohy - Professional developer offering services in web development, React, Next.js, and more."
         />
+        <link rel="icon" href="/images/mohy.jpeg" sizes="any" />
+        <link rel="icon" href="/images/mohy.jpeg" type="image/png" sizes="32x32" />
+
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://imohy-portfolio.vercel.app/" />
         <meta property="og:title" content="IMohy | Developer" />

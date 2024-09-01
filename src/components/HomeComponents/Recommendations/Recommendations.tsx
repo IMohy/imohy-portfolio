@@ -1,17 +1,15 @@
 import RecommendationCard from "./RecommendationCard";
 import axios from "axios";
-import { useQuery } from "react-query";
 import { Key } from "react";
 import ParagraphSkeleton from "../../shared/ParagraphSkeleton";
+import { fetchRecommendationsData } from "@/api/recommendations";
+import { useQuery } from "@tanstack/react-query";
 
 const Recommendations = () => {
-    const { isLoading, error, data } = useQuery("recommendations", () =>
-        axios
-            .get("api/recommendations")
-            .then(({ data }) => data)
-            .catch((error) => console.error("Error fetching testimonials:", error))
-    );
-
+    const { isLoading, data } = useQuery({
+        queryKey: ["recommendations"],
+        queryFn: fetchRecommendationsData,
+    });
     return (
         <>
             <div className="px-2 md:px-8 py-4 text-lg font-bold text-Snow">Recommendations</div>
