@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Badge from "../shared/Badge";
-import { PortfolioCardData } from "../../pages/portfolio";
+import { Key } from "react";
 
-const PortfolioCard = ({ data }: { data: PortfolioCardData }) => {
+const PortfolioCard = ({ data }: { data: any }) => {
     return (
         <div className="card_stylings overflow-hidden h-full">
             <img
@@ -42,7 +42,7 @@ const PortfolioCard = ({ data }: { data: PortfolioCardData }) => {
                 </div>
                 <p className="text-xs text-LightGray font-normal">{data?.projectDetail}</p>
                 <div className="text-sm flex flex-wrap gap-3 py-2">
-                    {data.technologiesUsed.map((index, key) => (
+                    {data.technologiesUsed.map((index: { tech: string; }, key: Key | null | undefined) => (
                         <Badge key={key} title={index.tech} />
                     ))}
                 </div>
