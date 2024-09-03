@@ -12,7 +12,6 @@ import { SlOptionsVertical } from "react-icons/sl";
 import { ReactNode, useState } from "react";
 import Intro from "@/components/shared/Intro";
 import Nav from "@/components/shared/Nav/Nav";
-import Head from "next/head";
 import Providers from "./providers";
 import "./styles/globals.css";
 
@@ -40,8 +39,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   };
 
   return (
-    <html>
-      <Head>
+    <html lang="en">
+      <head>
+        <title>IMohy | Portfolio</title>
         <meta name="title" content="IMohy" />
         <meta
           name="description"
@@ -51,7 +51,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <link rel="icon" href="/images/mohy.jpeg" type="image/png" sizes="32x32" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://imohy-portfolio.vercel.app/" />
+        <meta property="og:url" content="https://imohy-portfolio-final.vercel.app/" />
         <meta property="og:title" content="IMohy | Developer" />
         <meta
           property="og:description"
@@ -60,7 +60,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <meta property="og:image" content="/images/mohy.jpeg" />
 
         <meta property="twitter:card" content="/images/mohy.jpeg" />
-        <meta property="twitter:url" content="https://imohy-portfolio.vercel.app/" />
+        <meta property="twitter:url" content="https://imohy-portfolio-final.vercel.app/" />
         <meta property="twitter:title" content="IMohy | Developer" />
         <meta
           property="twitter:description"
@@ -70,7 +70,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <meta name="theme-color" content="#1fdf64" />
         <link rel="apple-touch-icon" href="/images/mohy.jpeg" />
         <link rel="shortcut icon" href="/images/mohy.jpeg" />
-      </Head>
+      </head>
       <body>
         <div className={`h-screen lg:p-[0.8rem] flex flex-col select-none font-circular`}>
           <div className="lg:hidden">
@@ -137,4 +137,5 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     </html>
   );
 };
+
 export default Layout;
