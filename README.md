@@ -59,4 +59,4 @@ Here are some features and improvements that are planned:
 
 ## Contact
 
-For any inquiries or feedback, please contact me via email at mohy.web@gmai.com
+For any inquiries or feedback, please contact me via email at mohy.web@gmail.com
