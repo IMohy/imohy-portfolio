@@ -66,6 +66,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           property="twitter:description"
           content="IMohy - Professional developer offering services in web development, React, Next.js, and more."
         />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="IMohy | Portfolio" />
         <meta property="twitter:image" content="/images/mohy.jpeg" />
         <meta name="theme-color" content="#1fdf64" />
         <link rel="apple-touch-icon" href="/images/mohy.jpeg" />
