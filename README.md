@@ -17,7 +17,8 @@ Welcome to my portfolio! This project showcases my work and skills using Next.js
 Clone the project
 
 ```bash
-  git clone https://github.com/IMohy/imohy-portfolio.git
+  git clone https://github.com/IMohy/nextjs-portfolio.git
+
 ```
 
 Go to the project directory
