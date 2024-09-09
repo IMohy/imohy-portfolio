@@ -9,6 +9,7 @@ Welcome to my portfolio! This project showcases my work and skills using Next.js
 ## Authors
 
 - [@imohy](https://www.github.com/imohy)
+- Feel free to clone it ;)  
 
 
 ## Run Locally
